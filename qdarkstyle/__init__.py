@@ -191,7 +191,7 @@ def load_stylesheet(pyside=True):
         # Detect the PySide version available
         try:
             import PySide
-        except ModuleNotFoundError:
+        except ImportError:
             import PySide2
             pyside_ver = 2
         else:
